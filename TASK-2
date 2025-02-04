@@ -1,28 +1,4 @@
-{
- "cells": [
-  {
-   "cell_type": "code",
-   "execution_count": 2,
-   "id": "22008b7a",
-   "metadata": {},
-   "outputs": [],
-   "source": [
-    "import pandas as pd\n",
-    "import numpy as np\n",
-    "import seaborn as sns\n",
-    "import matplotlib.pyplot as plt\n",
-    "\n",
-    "%matplotlib inline\n"
-   ]
-  },
-  {
-   "cell_type": "code",
-   "execution_count": 4,
-   "id": "54c407e8",
-   "metadata": {},
-   "outputs": [],
-   "source": [
-    "data = pd.read_csv('housing.csv')"
+v')"
    ]
   },
   {
