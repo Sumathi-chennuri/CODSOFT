@@ -1,0 +1,124 @@
+{
+  "nbformat": 4,
+  "nbformat_minor": 0,
+  "metadata": {
+    "colab": {
+      "provenance": [],
+      "authorship_tag": "ABX9TyMyeDrt2xTx7aaCRZHFZ6nt",
+      "include_colab_link": true
+    },
+    "kernelspec": {
+      "name": "python3",
+      "display_name": "Python 3"
+    },
+    "language_info": {
+      "name": "python"
+    }
+  },
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "view-in-github",
+        "colab_type": "text"
+      },
+      "source": [
+        "<a href=\"https://colab.research.google.com/github/Sumathi-chennuri/CODSOFT/blob/main/TASK_1\" target=\"_parent\"><img src=\"https://colab.research.google.com/assets/colab-badge.svg\" alt=\"Open In Colab\"/></a>"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": 1,
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "gX2AHwxWSX0t",
+        "outputId": "db2abad8-a589-452e-f12a-85c2b5f5578f"
+      },
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Chatbot: Hello! Type 'bye' to end the conversation.\n",
+            "You: hi\n",
+            "Chatbot: Hello! How can I assist you today?\n",
+            "You: what is time?\n",
+            "Chatbot: The current time is 09:29:03.\n",
+            "You: palce\n",
+            "Chatbot: I'm sorry, I didn't understand that. Can you ask something else?\n",
+            "You: place\n",
+            "Chatbot: I'm sorry, I didn't understand that. Can you ask something else?\n",
+            "You: address\n",
+            "Chatbot: I'm sorry, I didn't understand that. Can you ask something else?\n",
+            "You: bye\n",
+            "Chatbot: Goodbye! Have a nice day!\n"
+          ]
+        }
+      ],
+      "source": [
+        "import re\n",
+        "\n",
+        "# Function to define the chatbot's responses\n",
+        "def get_response(user_input):\n",
+        "    # Convert the user input to lowercase to make the matching case-insensitive\n",
+        "    user_input = user_input.lower()\n",
+        "\n",
+        "    # Basic greetings\n",
+        "    if re.search(r'\\b(hi|hello|hey)\\b', user_input):\n",
+        "        return \"Hello! How can I assist you today?\"\n",
+        "\n",
+        "    # Asking about the chatbot's identity\n",
+        "    elif re.search(r'\\bwho are you\\b', user_input):\n",
+        "        return \"I am a simple chatbot created to help with basic queries. How can I assist you?\"\n",
+        "\n",
+        "    # Asking about the time\n",
+        "    elif re.search(r'\\btime\\b', user_input):\n",
+        "        from datetime import datetime\n",
+        "        return f\"The current time is {datetime.now().strftime('%H:%M:%S')}.\"\n",
+        "\n",
+        "    # Asking for help\n",
+        "    elif re.search(r'\\b(help|support)\\b', user_input):\n",
+        "        return \"I'm here to help! You can ask me questions like 'Who are you?', 'What is the time?', or just say 'Hi!'\"\n",
+        "\n",
+        "    # Goodbye\n",
+        "    elif re.search(r'\\bbye\\b', user_input):\n",
+        "        return \"Goodbye! Have a nice day!\"\n",
+        "\n",
+        "    # If the input doesn't match any predefined patterns\n",
+        "    else:\n",
+        "        return \"I'm sorry, I didn't understand that. Can you ask something else?\"\n",
+        "\n",
+        "# Main function to handle the chatbot interaction\n",
+        "def chat():\n",
+        "    print(\"Chatbot: Hello! Type 'bye' to end the conversation.\")\n",
+        "\n",
+        "    while True:\n",
+        "        user_input = input(\"You: \")\n",
+        "\n",
+        "        # Exit the chat if the user says 'bye'\n",
+        "        if 'bye' in user_input.lower():\n",
+        "            print(\"Chatbot: Goodbye! Have a nice day!\")\n",
+        "            break\n",
+        "\n",
+        "        # Get the chatbot's response and print it\n",
+        "        response = get_response(user_input)\n",
+        "        print(\"Chatbot:\", response)\n",
+        "\n",
+        "# Start the chatbot\n",
+        "if __name__ == \"__main__\":\n",
+        "    chat()\n"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [],
+      "metadata": {
+        "id": "RCH2aHIaSkSf"
+      },
+      "execution_count": null,
+      "outputs": []
+    }
+  ]
+}
