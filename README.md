@@ -1,5 +1,6 @@
 # CODSOFT-Intenship
 I have completed tasks given for my internship as a Artificial Intelligence in CodSoft. I hope it will be helpfull for you
+
 TASK 1
 
 CHATBOT WITH RULE-BASED
@@ -12,6 +13,7 @@ techniques to identify user queries and provide appropriate
 responses. This will give you a basic understanding of natural
 
 language processing and conversation flow.
+
 TASK 2
 
 TIC-TAC-TOE AI
@@ -22,6 +24,7 @@ or without Alpha-Beta Pruning to make the AI player unbeatable.
 This project will help you understand game theory and basic search
 
 algorithms.
+
 TASK 3
 
 TIC-TAC-TOE AI
